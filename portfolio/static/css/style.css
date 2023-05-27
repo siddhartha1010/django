@@ -1,0 +1,594 @@
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Changa+One:ital@1&display=swap');
+  </style>
+
+
+   /* common styles */
+   {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       text-decoration: none;
+       list-style-type:none ;
+       outline: none;
+       font-family: "Jura","sans-serif";
+   }
+    
+
+   html{
+       font-size: 62.5%;
+       scroll-behavior: smooth;
+       /* By default 1 rem =16 pixels by making font-size: 62.5% one ram=10%; */
+   }
+
+   @media(max-width:998px){
+    html{
+      font-size: 55%;
+    }
+
+   }
+
+   @media(max-width:768px){
+   html{
+    font-size: 42%;
+  }
+ }
+   
+ @media(max-width:550px){
+  html{
+    font-size: 35%;
+  }
+  .detail{
+    font-size: 1rem;
+  }
+
+ }
+   .center{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+ }
+
+ .jumbotron-curve {
+    border-radius: 0% 15% 0% 15%;
+  }
+
+  .navbar-toggler-icon {
+    background-color: black;
+  }
+  
+  .navbar-brand{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    padding-left: 2rem;
+    text-transform: uppercase;
+  }
+  .navbar-brand:hover{
+    color:#F0122D ;
+  }
+
+  .nav-item{
+    font-size: 2rem;
+  }
+
+  .navbar-brand::first-letter{
+    font-size: 4rem;
+    border: 0.45rem solid #000;
+    border-right: transparent;
+    padding-left: 1rem;
+    color: #F0122D;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 2.5rem;
+    color: #000;
+  }
+
+  .navbar-nav .nav-link {
+    color: #000;
+    border-bottom: 0.2rem solid transparent;
+  }
+
+  .navbar-nav .nav-link:hover{
+    color: #F0122D;
+  }
+
+  .navbar-nav .nav-link:hover {
+    border-bottom-color: black; /* Change the border color on hover */
+  }
+
+
+  .section-1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+
+/* Animated Circles */
+.main-circle {
+  width: 40rem;
+  height: 40rem;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: width 0.2s, height 0.2s;
+  /* align-self: center;
+  justify-content: center; */
+  margin-bottom: 3rem;
+  margin-left: 7rem;
+}
+
+.main-circle:hover {
+  width: 60rem;
+  height: 60rem;
+}
+
+.main-circle img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  /* max-height: 100%; */
+}
+
+.detail{
+  position: absolute;
+  margin-top: 50rem;
+  z-index: 1000;
+  /* float: left; */
+}
+
+.detail h1{
+  color: #000;
+  font-size: 7rem;
+  line-height: 7rem;
+  margin-right: 5rem;
+  
+}
+
+.detail h1 span{
+  color: #9b0e0e;
+  display: block;
+}
+
+.detail p{
+  color: #000;
+  font-size: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+}
+
+.btn{
+  color: #000;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  background-color: #9b0e0e;
+  padding: 1rem 3rem;
+  border-radius: 50rem;
+  display: inline-block;
+  font-weight: all .4s ease-in-out;
+  border: 2px solid red;
+  margin-bottom: 5rem;
+}
+
+.btn:hover{
+  background: #F0122D;
+}
+
+   .featured-text{
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: #000 ;
+    text-transform: uppercase;
+    width: 0;
+    word-wrap: break-word;
+    line-height: 2.7;
+    position: sticky; 
+    font-family: 'Changa One', cursive;
+    top: 0; 
+
+   
+
+}
+
+ .featured-text-1 {
+    margin: 0 auto 0 7rem;
+  
+}
+   
+  .featured-text-2 {
+    margin: 0 10rem 0 auto;
+     
+}
+
+
+.section-2-heading{
+    font-size: 3rem;
+    font-weight: bold;
+    color:#000;
+    text-transform: uppercase;
+    position: absolute;
+    left: 7rem;
+    width: 0;
+    word-break: break-all;
+    line-height: 3;
+    font-family: 'Changa One', cursive;
+    margin-top: 8rem;
+}
+
+.intro{
+    font-size: 3rem;
+    padding: 20rem 10rem 10rem 13rem;
+    
+}
+
+.section-3{
+    width: 100%;
+    height: 100%;
+    padding: 10rem 0;
+    margin-top: 10rem;
+    position: relative;
+
+}
+.projects{
+    flex-wrap: wrap;
+    padding-bottom: 15rem;
+    
+}
+.project{
+    width: 40rem;
+    height: 45rem;
+    overflow: hidden;
+    margin: 5rem;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border: 0.2rem dotted #9b0e0e;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    perspective: 20rem;
+    transition: opacity 0.5s;
+}
+
+.project img {
+    width: 90%;
+    object-fit: cover;
+    position: absolute;
+    top: 2rem;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: top 4s 0.2s, opacity 0.2s;
+} 
+.section-3-heading{
+    font-size: 3.3rem;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    position: absolute;
+    top: 15%;
+    left: 2rem;
+    width: 0;
+    word-break: break-all;
+    line-height: 3.5;
+    font-family: 'Changa One', cursive;
+
+
+    
+}
+
+.project:nth-child(odd):hover img {
+  animation: oddImgAnim 4s 0.2s;
+  opacity: 1;
+}
+
+@keyframes oddImgAnim {
+  0% {
+    transform: rotateY(0);
+  }
+  25% {
+    transform: rotateY(-2deg) rotateX(2deg);
+  }
+  50% {
+    transform: rotateY(2deg) rotateX(-2deg);
+  }
+  100% {
+    transform: rotateY(0);
+  }
+}
+
+.project:nth-child(even):hover img {
+  animation: evenImgAnim 4s 0.2s;
+  opacity: 1;
+}
+
+@keyframes evenImgAnim {
+  0% {
+    transform: rotateY(0);
+  }
+  25% {
+    transform: rotateY(2deg) rotateX(-2deg);
+  }
+  50% {
+    transform: rotateY(-2deg) rotateX(2deg);
+  }
+  100% {
+    transform: rotateY(0);
+  }
+}
+
+/* Big Project Image */
+.project-img-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden scroll;
+  z-index: 100;
+  scroll-behavior: smooth;
+  animation: imgWrapperAnim 1s forwards;
+}
+
+@keyframes imgWrapperAnim {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 7rem 20rem;
+  opacity: 0.9;
+  display: block;
+  transform-origin: top center;
+  animation: imgAnim 1s 1s both;
+}
+
+@keyframes imgAnim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+/* section 4 heading */
+.section-4-heading{
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  position: absolute;
+  left: 4rem;
+  font-family: 'Changa One', cursive;
+  transform: translateY(-50%);
+  width: 0;
+  word-break: break-all;
+  line-height: 3;
+  margin-top: 20rem;
+  margin-bottom: 10rem;
+  
+}
+/* End of section 4 heading */
+
+
+/* End of section 4 */
+.contain{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 10rem;
+}
+
+.box{
+ width: 12rem;
+ height: 12rem;
+ border: 1px solid #FDF8F0;;
+ margin: auto;
+ text-align: center;
+ justify-content: center;
+ font-size: 6rem;
+}
+
+.outer{
+  height: 16rem;
+  width: 16rem;
+  background: conic-gradient(#000 3.6deg, #ededed 0deg);
+  border-radius: 50%;
+  padding: 2rem; 
+  
+} 
+
+.inner{
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;  
+   display: flex;
+   align-items: center;
+   justify-content: center;  
+   font-size: 3rem;
+} 
+
+.boxs{
+  width: 12rem;
+  height: 12rem;
+  border: 1px solid #fff;
+  margin: auto;
+ text-align: center;
+ justify-content: center;
+ font-size: 6rem;
+}
+
+.outers{
+  height: 16rem;
+  width: 16rem;
+  background: conic-gradient(#000 270deg, #ededed 0deg);
+  border-radius: 50%;
+  padding: 2rem; 
+  
+}
+
+.inners{
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%; 
+   display: flex;
+   align-items: center;
+   justify-content: center;  
+   font-size: 3rem;
+}
+
+.boxss{
+  width: 12rem;
+  height: 12rem;
+  border: 1px solid #fff;
+  margin: auto;
+ text-align: center;
+ justify-content: center;
+ font-size: 6rem;
+}
+
+.outerss{
+  height: 16rem;
+  width: 16rem;
+  background: conic-gradient(#000 100deg, #ededed 0deg);
+  border-radius: 50%;
+  padding: 2rem; 
+  
+}
+
+.innerss{
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%; 
+   display: flex;
+   align-items: center;
+   justify-content: center;  
+   font-size: 3rem;
+}
+
+.second{
+  display: flex;
+  flex-direction: row;
+}
+
+.text{
+  font-size: large;
+  padding: 1rem;
+  text-transform: uppercase;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+ 
+}
+/* End of section 4 */
+
+/* section 4 heading */
+.section-5-heading{
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  position: absolute;
+  left: 4rem;
+  transform: translateY(-50%);
+  width: 0;
+  word-break: break-all;
+  line-height: 2.7;
+  font-family: 'Changa One', cursive;
+  margin-top: 30rem;
+}
+/* End of section 4 heading */
+
+.form{
+  margin-top: 50rem;
+  font-size: 2rem;
+}
+
+input[type="submit"] {
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 10rem;
+}
+
+.social-icon ul{
+  position: absolute;
+  display: flex;
+  size: 10rem;
+}
+.social-icon ul li{
+  margin: 0 2rem;
+  list-style: none;
+
+}
+.social-icon ul li .fa-brands{
+  font-size: 3rem;
+  line-height: 6rem;
+  transition: .3s;
+  color: #000;
+}
+
+.social-icon ul li a:hover{
+  color: #fff;
+}
+
+.social-icon ul li a{
+  position: relative;
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: rgb(245,243,243);
+  text-align: center;
+  box-shadow: 0 0.16rem 0.20rem 0 rgb(0,0,0,0.2);
+  transition: .6s;
+  margin-bottom: 5rem;
+}
+
+.social-icon ul li a:hover{
+  transform: translate(0,-10%);
+}
+
+.social-icon ul li:nth-child(1) a:hover{
+  background-color: rgb(60,132,240);
+}
+
+.social-icon ul li:nth-child(2) a:hover{
+  background-color: rgb(234, 60, 240);
+}
+
+.social-icon ul li:nth-child(3) a:hover{
+  background-color: rgba(240, 236, 236, 0.99);
+}
+
+.social-icon ul li:nth-child(4) a:hover{
+  background-color: rgb(60,132,240);
+}
+
+.social-icon ul li:nth-child(5) a:hover{
+  background-color: rgb(96, 240, 60);
+}
+.social-icon ul li:nth-child(6) a:hover{
+  background-color: rgb(60,132,240);
+}
